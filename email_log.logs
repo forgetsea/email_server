@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "C:\Users\10492\Documents\project\email\main.py", line 24, in <module>
+    account = {"user": EMAIL_ADDRESS, "pass": EMAIL_PASSWORD}
+                       ^^^^^^^^^^^^^
+NameError: name 'EMAIL_ADDRESS' is not defined
+waiting to process
+Traceback (most recent call last):
+  File "C:\Users\10492\Documents\project\email\main.py", line 4, in <module>
+    from src.excel_utils import read_all_emails
+  File "C:\Users\10492\Documents\project\email\src\__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch, build_email_content
+ImportError: cannot import name 'send_email_batch' from 'src.email_utils' (C:\Users\10492\Documents\project\email\src\email_utils.py). Did you mean: 'send_email_batch_SES'?
+Traceback (most recent call last):
+  File "C:\Users\10492\Documents\project\email\main.py", line 4, in <module>
+    from src.excel_utils import read_all_emails
+  File "C:\Users\10492\Documents\project\email\src\__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch, build_email_content
+ImportError: cannot import name 'send_email_batch' from 'src.email_utils' (C:\Users\10492\Documents\project\email\src\email_utils.py). Did you mean: 'send_email_batch_SES'?
+waiting to process

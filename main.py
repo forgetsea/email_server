@@ -1,40 +1,73 @@
-import schedule
 import time
 from pathlib import Path
 
 from src.excel_utils import read_all_emails
 from src.sent_tracker import load_sent_emails, save_sent_emails
-from src.email_utils import send_email_batch
-from src.config import EMAIL_SUBJECT, BATCH_LIMIT, RECIPIENT_LIMIT, EMAIL_TEMPLATE_PATH,EXCEL_FOLDER,SENT_RECORD_FILE
+from src.email_utils import send_email_batch_gmail,smtp_send_SES
+from src.logger_utils import logger
+from src.config import *
+
+
+import os
+import json
+
+# 确保脚本运行目录正确
+os.chdir(r"C:\Users\10492\Documents\project\email")
 
 # loading emails
 all_emails = read_all_emails(EXCEL_FOLDER)
 sent_emails = load_sent_emails(SENT_RECORD_FILE)
 remaining_emails = list(all_emails - sent_emails)
-print(f"all emails: {len(all_emails)}, pending send: {len(remaining_emails)}")
+logger.info(f"all emails: {len(all_emails)}, pending send: {len(remaining_emails)}")
+logger.info(f"Will send Title: {EMAIL_SUBJECT}. Using template {EMAIL_TEMPLATE_PATH}")
 
+account = {"user": SES_ACCOUNT, "pass": SES_PASSWORD}
 
 # send email
 def send_batches():
     global remaining_emails, sent_emails
     for _ in range(BATCH_LIMIT):
         if not remaining_emails:
-            print("All emails have been sent")
+            logger.info("All emails have been sent")
             return
         batch = remaining_emails[:RECIPIENT_LIMIT]
-        send_email_batch(batch, EMAIL_SUBJECT, EMAIL_TEMPLATE_PATH)
+        send_email_batch_gmail(batch, EMAIL_SUBJECT, EMAIL_TEMPLATE_PATH, account)
         sent_emails.update(batch)
         remaining_emails = remaining_emails[RECIPIENT_LIMIT:]
         save_sent_emails(SENT_RECORD_FILE, sent_emails)
-        time.sleep(10)  
+        logger.info(f"pending send: {len(remaining_emails)}")
 
-# 21:00 process
-# schedule.every().day.at("21:00").do(send_batches)
+def send_SES():
+    global remaining_emails, sent_emails
+    SLEEP_INTERVAL = 1 / SES_RATE_LIMIT
+    count = 1
+    for recipient in remaining_emails:
+        if count >= SES_MAX_DAILY_LIMIT:
+            logger.error("Reached SES daily quota limit. Exiting.")
+            break
 
+        try:
+            logger.info(f"Prepare to send #{count} ")
+            success = send_one_email_SES(recipient, EMAIL_SUBJECT, EMAIL_TEMPLATE_PATH, account)
+            if success:
+                sent_emails.add(recipient)
+                save_sent_emails(SENT_RECORD_FILE, sent_emails)
+                count += 1
+            else:
+                logger.warning(f"Send failed: {recipient}")
+        except Exception as e:
+            logger.error(f"Unexpected error for {recipient}: {e}")
+        time.sleep(SLEEP_INTERVAL)
+
+# system auto
 print("waiting to process")
-send_batches()
-
-# # permentally running
-# while True:
-#     schedule.run_pending()
-#     time.sleep(60)
+# send_batches()
+smtp_send_SES(
+    remaining_emails=remaining_emails,
+    subject=EMAIL_SUBJECT,
+    template_path=EMAIL_TEMPLATE_PATH,
+    account=account,
+    sent_emails=sent_emails,
+    SENT_RECORD_FILE=SENT_RECORD_FILE
+)
+print("All finished")

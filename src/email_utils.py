@@ -2,16 +2,20 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
-from .config import EMAIL_ADDRESS, EMAIL_PASSWORD
+from .config import *
 from .logger_utils import logger
+from .sent_tracker import load_sent_emails, save_sent_emails
 
-def build_email_content(batch_emails, subject, template_path):
+MAX_RETRIES = 3
+
+def build_email_content(batch_emails, subject, template_path, address):
     msg = MIMEMultipart('related')
     msg['Subject'] = subject
-    msg['From'] = EMAIL_ADDRESS
-    msg['To'] = EMAIL_ADDRESS
+    msg['From'] = address
+    msg['To'] = address
     msg['Bcc'] = ','.join(batch_emails)
     msg['List-Unsubscribe'] = '<mailto:tech@chemgood.com?subject=unsubscribe>'
+    msg['X-SES-CONFIGURATION-SET'] = 'my-first-configuration-set'
 
     # load template
     html_body = Path(template_path).read_text(encoding='utf-8')
@@ -21,13 +25,93 @@ def build_email_content(batch_emails, subject, template_path):
 
     return msg
 
-def send_email_batch(batch_emails, subject, template_path):
+def send_email_batch_gmail(batch_emails, subject, template_path, account):
     try:
-        msg = build_email_content(batch_emails, subject, template_path)
+        msg = build_email_content(batch_emails, subject, template_path, EMAIL_ADDRESS)
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+            smtp.login(account["user"], account["pass"])
             smtp.send_message(msg)
-        print(f"Already sent {msg['Bcc'].count(',') + 1} emails")
-        logger.info(f"Already send {len(batch_emails)} emails: {batch_emails}")
+        logger.info(f"Already send {len(batch_emails)} emails")
     except Exception as e:
         logger.error(f"Failed: {str(e)} | emails: {batch_emails}")
+
+
+def send_one_email_SES(email, subject, template_path, account):
+    for attempt in range(MAX_RETRIES):
+        try:
+            smtp_send_SES(email, subject, template_path, account)
+            return True  # 成功
+        except smtplib.SMTPAuthenticationError as e:
+            logger.critical(f"[FATAL] SMTP Authentication failed: {e}")
+            raise SystemExit("Stopped: Invalid SMTP credentials.")
+        except (smtplib.SMTPConnectError, smtplib.SMTPServerDisconnected) as e:
+            logger.warning(f"[Retry {attempt+1}] SMTP server unavailable: {e}")
+            time.sleep(5)
+        except smtplib.SMTPSenderRefused as e:
+            logger.error(f"[Sender Refused] Check sender email: {e}")
+            return False
+        except smtplib.SMTPRecipientsRefused as e:
+            logger.warning(f"[Recipients Refused] Invalid emails in batch: {e}")
+            return False
+        except smtplib.SMTPException as e:
+            logger.warning(f"[SMTP Error] General SMTP error: {e}")
+            return False
+        except Exception as e:
+            logger.exception(f"[Unexpected Error] {e}")
+            return False
+    logger.error("[MAX RETRIES EXCEEDED] Giving up on this batch.")
+    return False
+
+def smtp_send_SES(remaining_emails, subject, template_path, account, sent_emails, SENT_RECORD_FILE):
+    html_template = load_template(template_path)
+    count = 0
+    try:
+        msg = build_personal_email(email, subject, template_path, EMAIL_ADDRESS)
+        with smtplib.SMTP_SSL(SES_SMTP_SERVER, SES_SMTP_PORT) as smtp:
+            smtp.login(account["user"], account["pass"])
+            logger.info("SMTP connection established.")
+
+            for recipient in remaining_emails:
+                if count >= SES_MAX_DAILY_LIMIT:
+                    logger.warning("Daily SES limit reached.")
+                    break
+
+                msg = build_email(recipient, subject, html_template, EMAIL_ADDRESS)
+                try:
+                    smtp.send_message(msg)
+                    sent_emails.add(recipient)
+                    save_sent_emails(SENT_RECORD_FILE, sent_emails)
+                    count += 1
+                    logger.info(f"[{count}] Sent to: {recipient}")
+                except Exception as e:
+                    logger.error(f"Failed to send to {recipient}: {e}")
+
+                time.sleep(SLEEP_INTERVAL)
+    except smtplib.SMTPAuthenticationError as e:
+        logger.critical(f"SMTP authentication failed: {e}")
+        raise SystemExit("Stopped due to invalid SMTP credentials.")
+    except Exception as e:
+        logger.critical(f"Unexpected failure: {e}")
+        raise
+
+def load_template_body(template_path):
+    return Path(template_path).read_text(encoding='utf-8')
+
+def build_personal_email(recipient, subject, html_body, sender):
+    # Create a multipart message with HTML content
+    msg = MIMEMultipart('alternative')
+    msg['Subject'] = subject
+    msg['From'] = sender
+    msg['To'] = recipient
+
+    # Unsubscribe header (RFC compliant)
+    msg['List-Unsubscribe'] = '<mailto:tech@chemgood.com?subject=unsubscribe>'
+    msg['X-SES-CONFIGURATION-SET'] = 'my-first-configuration-set'
+
+    # Optionally add plain text fallback
+    plain_text = subject
+
+    msg.attach(MIMEText(plain_text, 'plain'))
+    msg.attach(MIMEText(html_body, 'html'))
+
+    return msg
