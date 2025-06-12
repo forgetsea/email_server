@@ -17,3 +17,11 @@ Traceback (most recent call last):
     from .email_utils import send_email_batch, build_email_content
 ImportError: cannot import name 'send_email_batch' from 'src.email_utils' (C:\Users\10492\Documents\project\email\src\email_utils.py). Did you mean: 'send_email_batch_SES'?
 waiting to process
+waiting to process
+Traceback (most recent call last):
+  File "C:\Users\10492\Documents\project\email\main.py", line 65, in <module>
+    smtp_send_SES(
+  File "C:\Users\10492\Documents\project\email\src\email_utils.py", line 66, in smtp_send_SES
+    html_template = load_template(template_path)
+                    ^^^^^^^^^^^^^
+NameError: name 'load_template' is not defined. Did you mean: 'html_template'?

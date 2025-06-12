@@ -1,4 +1,5 @@
 import smtplib
+import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
@@ -63,36 +64,41 @@ def send_one_email_SES(email, subject, template_path, account):
     return False
 
 def smtp_send_SES(remaining_emails, subject, template_path, account, sent_emails, SENT_RECORD_FILE):
-    html_template = load_template(template_path)
-    count = 0
-    try:
-        msg = build_personal_email(email, subject, template_path, EMAIL_ADDRESS)
-        with smtplib.SMTP_SSL(SES_SMTP_SERVER, SES_SMTP_PORT) as smtp:
-            smtp.login(account["user"], account["pass"])
-            logger.info("SMTP connection established.")
+    html_template = load_template_body(template_path)
+    MAX_PER_SESSION=300
+    index = 0
+    total_emails = len(remaining_emails)
+    while index < total_emails:
+        try:
+            with smtplib.SMTP_SSL(SES_SMTP_SERVER, SES_SMTP_PORT) as smtp:
+                smtp.login(account["user"], account["pass"])
+                logger.info("SMTP connection established.")
 
-            for recipient in remaining_emails:
-                if count >= SES_MAX_DAILY_LIMIT:
-                    logger.warning("Daily SES limit reached.")
-                    break
+                session_count = 0
+                while session_count < MAX_PER_SESSION and index < total_emails:
+                    recipient = remaining_emails[index]
+                    if index >= SES_MAX_DAILY_LIMIT:
+                        logger.warning("Daily SES limit reached.")
+                        break
 
-                msg = build_email(recipient, subject, html_template, EMAIL_ADDRESS)
-                try:
-                    smtp.send_message(msg)
-                    sent_emails.add(recipient)
-                    save_sent_emails(SENT_RECORD_FILE, sent_emails)
-                    count += 1
-                    logger.info(f"[{count}] Sent to: {recipient}")
-                except Exception as e:
-                    logger.error(f"Failed to send to {recipient}: {e}")
-
-                time.sleep(SLEEP_INTERVAL)
-    except smtplib.SMTPAuthenticationError as e:
-        logger.critical(f"SMTP authentication failed: {e}")
-        raise SystemExit("Stopped due to invalid SMTP credentials.")
-    except Exception as e:
-        logger.critical(f"Unexpected failure: {e}")
-        raise
+                    msg = build_personal_email(recipient, subject, html_template, EMAIL_ADDRESS)
+                    try:
+                        smtp.send_message(msg)
+                        sent_emails.add(recipient)
+                        save_sent_emails(SENT_RECORD_FILE, sent_emails)
+                        session_count += 1
+                        logger.info(f"[{index}] Sent to: {recipient}")
+                    except Exception as e:
+                        logger.error(f"Failed to send to {recipient}: {e}")
+                    index += 1
+                    #1seconds 10email    
+                    time.sleep(0.1) 
+        except smtplib.SMTPAuthenticationError as e:
+            logger.critical(f"SMTP authentication failed: {e}")
+            raise SystemExit("Stopped due to invalid SMTP credentials.")
+        except Exception as e:
+            logger.critical(f"Unexpected failure: {e}")
+            raise
 
 def load_template_body(template_path):
     return Path(template_path).read_text(encoding='utf-8')
@@ -106,6 +112,7 @@ def build_personal_email(recipient, subject, html_body, sender):
 
     # Unsubscribe header (RFC compliant)
     msg['List-Unsubscribe'] = '<mailto:tech@chemgood.com?subject=unsubscribe>'
+    msg['List-Unsubscribe-Post'] = 'List-Unsubscribe=One-Click'
     msg['X-SES-CONFIGURATION-SET'] = 'my-first-configuration-set'
 
     # Optionally add plain text fallback

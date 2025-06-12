@@ -15,13 +15,13 @@ import json
 os.chdir(r"C:\Users\10492\Documents\project\email")
 
 # loading emails
-all_emails = read_all_emails(EXCEL_FOLDER)
-sent_emails = load_sent_emails(SENT_RECORD_FILE)
+all_emails = set(["sales@chemgood.com"])
+sent_emails = set()
 remaining_emails = list(all_emails - sent_emails)
 logger.info(f"all emails: {len(all_emails)}, pending send: {len(remaining_emails)}")
 logger.info(f"Will send Title: {EMAIL_SUBJECT}. Using template {EMAIL_TEMPLATE_PATH}")
 
-account = {"user": SES_ACCOUNT, "pass": SES_PASSWORD}
+account = {"user": EMAIL_ADDRESS, "pass": EMAIL_PASSWORD}
 
 # send email
 def send_batches():
@@ -37,15 +37,9 @@ def send_batches():
         save_sent_emails(SENT_RECORD_FILE, sent_emails)
         logger.info(f"pending send: {len(remaining_emails)}")
 
+
 # system auto
 print("waiting to process")
-# send_batches()
-smtp_send_SES(
-    remaining_emails=remaining_emails,
-    subject=EMAIL_SUBJECT,
-    template_path=EMAIL_TEMPLATE_PATH,
-    account=account,
-    sent_emails=sent_emails,
-    SENT_RECORD_FILE=SENT_RECORD_FILE
-)
+send_batches()
+
 print("All finished")

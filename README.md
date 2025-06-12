@@ -43,3 +43,10 @@ Image upload
 
 upload to forgetsea/assets
 image link(cloudflare cdn): https://assets-42h.pages.dev/
+
+
+---------------------------------------------
+How to send a new topic
+1.update email info in src/config.py
+2.Create a new template html file in templates/
+3.reset files/ , put new excel file in files/
