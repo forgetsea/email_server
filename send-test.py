@@ -12,7 +12,7 @@ import os
 import json
 
 # 确保脚本运行目录正确
-os.chdir(r"C:\Users\10492\Documents\project\email")
+os.chdir(BASE_DIR)
 
 # loading emails
 all_emails = set(["sales@chemgood.com"])

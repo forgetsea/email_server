@@ -9,3 +9,4 @@ templates/
 *.json
 test.py
 venv/
+.DS_Store

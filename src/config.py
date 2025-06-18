@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+from .email_config import *
 
 BASE_DIR = Path(__file__).resolve().parent.parent  # src/../
 load_dotenv(dotenv_path=BASE_DIR / '.env')
@@ -28,9 +29,3 @@ SES_SMTP_PORT = int(os.getenv('SES_SMTP_PORT'))
 AWS_ACCESS_KEY_ID=os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY=os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_SQS_URL=os.getenv('AWS_SQS_URL')
-
-#Update email info
-EMAIL_TEMPLATE_PATH = BASE_DIR / 'templates/GBM_PLX5622.html'
-SENT_RECORD_FILE = BASE_DIR /'temp/sent/sent_emails_GBM5622.pkl'
-EMAIL_SUBJECT = 'PLX-5622 – A Tool for Studying Microglia in GBM Recurrence'
-LOG_FILE = BASE_DIR / 'logs/GBM5622.log'
