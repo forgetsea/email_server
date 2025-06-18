@@ -1,11 +1,11 @@
 Lib/
 Scripts/
 __pycache__/
-temp/
 templates/
-logs/
 .env
 *.pkl
 *.xlsx
+*.log
+*.json
 test.py
 venv/
