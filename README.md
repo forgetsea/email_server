@@ -48,5 +48,7 @@ image link(cloudflare cdn): https://assets-42h.pages.dev/
 ---------------------------------------------
 How to send a new topic
 1.update email info in src/config.py
+	Template path, record_file subject, log_file
 2.Create a new template html file in templates/
 3.reset files/ , put new excel file in files/
+4. run test file

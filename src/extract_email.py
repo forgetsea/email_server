@@ -10,7 +10,7 @@ def extract_emails_from_file(filepath):
     
     return sorted(set(emails))
 
-# 示例调用
+# 方便 调用log里所有emails
 emails = extract_emails_from_file('../temp/temp.txt')
 
 Path("output_emails.txt").write_text('\n'.join(emails))

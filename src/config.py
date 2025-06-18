@@ -30,7 +30,7 @@ AWS_SECRET_ACCESS_KEY=os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_SQS_URL=os.getenv('AWS_SQS_URL')
 
 #Update email info
-EMAIL_TEMPLATE_PATH = BASE_DIR / 'templates/BI2865_CN.html'
-SENT_RECORD_FILE = BASE_DIR /'temp/sent/sent_emails_BI2865.pkl'
-EMAIL_SUBJECT = 'BI-2865, Potent Pan-KRAS Inhibitor--设有中国总代理'
-LOG_FILE = BASE_DIR / 'logs/BI2865.log'
+EMAIL_TEMPLATE_PATH = BASE_DIR / 'templates/GBM_PLX5622.html'
+SENT_RECORD_FILE = BASE_DIR /'temp/sent/sent_emails_GBM5622.pkl'
+EMAIL_SUBJECT = 'PLX-5622 – A Tool for Studying Microglia in GBM Recurrence'
+LOG_FILE = BASE_DIR / 'logs/GBM5622.log'

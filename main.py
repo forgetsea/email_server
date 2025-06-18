@@ -38,7 +38,7 @@ def send_batches():
         logger.info(f"pending send: {len(remaining_emails)}")
 
 # system auto
-print("waiting to process")
+logger.debug("waiting to process")
 # send_batches()
 smtp_send_SES(
     remaining_emails=remaining_emails,
@@ -48,4 +48,4 @@ smtp_send_SES(
     sent_emails=sent_emails,
     SENT_RECORD_FILE=SENT_RECORD_FILE
 )
-print("All finished")
+logger.debug("All finished")

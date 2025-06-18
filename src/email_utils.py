@@ -72,7 +72,7 @@ def smtp_send_SES(remaining_emails, subject, template_path, account, sent_emails
         try:
             with smtplib.SMTP_SSL(SES_SMTP_SERVER, SES_SMTP_PORT) as smtp:
                 smtp.login(account["user"], account["pass"])
-                logger.info("SMTP connection established.")
+                logger.info(f"SMTP connection established. Sending index{index}")
 
                 session_count = 0
                 while session_count < MAX_PER_SESSION and index < total_emails:
@@ -87,7 +87,7 @@ def smtp_send_SES(remaining_emails, subject, template_path, account, sent_emails
                         sent_emails.add(recipient)
                         save_sent_emails(SENT_RECORD_FILE, sent_emails)
                         session_count += 1
-                        logger.info(f"[{index}] Sent to: {recipient}")
+                        logger.debug(f"[{index}] Sent to: {recipient}")
                     except Exception as e:
                         logger.error(f"Failed to send to {recipient}: {e}")
                     index += 1
