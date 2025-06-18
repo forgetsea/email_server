@@ -1,0 +1,11 @@
+Lib/
+Scripts/
+__pycache__/
+temp/
+templates/
+logs/
+.env
+*.pkl
+*.xlsx
+test.py
+venv/
