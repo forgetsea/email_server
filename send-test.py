@@ -2,7 +2,7 @@ import time
 from pathlib import Path
 
 from src.excel_utils import read_all_emails
-from src.sent_tracker import load_sent_emails, save_sent_emails
+from src.sent_tracker import load_sent_emails, save_sent_emails, load_ses_emails
 from src.email_utils import send_email_batch_gmail,smtp_send_SES
 from src.logger_utils import logger
 from src.config import *
@@ -15,9 +15,10 @@ import json
 os.chdir(BASE_DIR)
 
 # loading emails
-all_emails = set(["sales@chemgood.com"])
+all_emails = set(["tech@chemgood.com"])
 sent_emails = set()
-remaining_emails = list(all_emails - sent_emails)
+json_emails = load_ses_emails(JSON_FOLDER)
+remaining_emails = list(all_emails - sent_emails - json_emails)
 logger.info(f"all emails: {len(all_emails)}, pending send: {len(remaining_emails)}")
 logger.info(f"Will send Title: {EMAIL_SUBJECT}. Using template {EMAIL_TEMPLATE_PATH}")
 
@@ -41,5 +42,4 @@ def send_batches():
 # system auto
 print("waiting to process")
 send_batches()
-
 print("All finished")

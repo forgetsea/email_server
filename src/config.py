@@ -15,6 +15,7 @@ BATCH_LIMIT = int(os.getenv('BATCH_LIMIT', 5))
 
 #email load directory
 EXCEL_FOLDER = BASE_DIR / 'files'
+JSON_FOLDER = BASE_DIR / 'temp/ses_report/'
 
 #Amazon email server
 SES_ACCOUNT = os.getenv('SES_SMTP_USERNAME')
