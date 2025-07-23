@@ -1,0 +1,126 @@
+// import requests
+// import json
+
+// # Define the base URL for the NIH RePORTER API
+// base_url = "https://api.reporter.nih.gov/v2/projects/search"
+
+// # Define the parameters for the search
+
+alzhemier[Title/Abstract] AND ("2021/05/02"[Date - Publication] : "2024/05/01"[Date - Publication])
+alzheimer[Title/Abstract] AND ("2021/05/02"[Date - Publication] : "2024/05/01"[Date - Publication])
+
+params = {
+    "criteria": {
+   "text": "COVID", 
+    },
+    "include_fields": [
+   "ProjectTitle",
+   "AbstractText",
+   "PIName",
+   "Organization",
+   "ProjectNum",
+   "FundingICs",
+   "FY",
+   "ProjectStartDate",
+   "ProjectEndDate"
+    ],
+    "offset": 0,
+    "limit": 10 
+}
+
+// # Make the request to the NIH RePORTER API
+// response = requests.post(base_url, json=params)
+
+// # Check if the request was successful
+// if response.status_code == 200:
+//     # Dump the full JSON response to the console
+//     response_json = response.json()
+//     print(json.dumps(response_json, indent=4))
+// else:
+//     print(f"Failed to retrieve data: {response.status_code}")
+
+
+Astrocytes
+
+{
+    "abstract": "The existe etc.....",
+    "authors": [
+   {
+       "affiliation": "Department Mong",
+       "initials": "H",
+       "lastname": "Li"
+   },
+   {
+     "affiliation": "Department ongoliMedis Region, China.",
+     "firstname": "Xiaoyan",
+     "initials": "X",
+     "lastname": "Qi"
+   },
+   {
+     "affiliation": "Department 010020, Inner Mongolia, China.",
+     "firstname": "Lijun",
+     "initials": "L",
+     "lastname": "He"
+   },
+   {
+     "affiliation": "Department of Radiation Oncr Hona.",
+     "firstname": "Hao",
+     "initials": "H",
+     "lastname": "Yang"
+   },
+   {
+ "affiliation": "DepartmeDistao2023@163.com.",
+ "firstname": "Haitao",
+ "initials": "H",
+ "lastname": "Ju"
+   }
+    ],
+    "conclusions": "PRMT1 promptosis.",
+    "copyrights": "u00a9 2024. The Author(s) under exclusive licence to Japan Radiological Society.",
+    "doi": "10.1007/s11604-024-01651-y",
+    "journal": "Japanese journal of radiology",
+    "keywords": [
+   "Ferroptosis",
+   "Glioma stem cells",
+   "PRMT1",
+   "Radiotherapy resistance"
+    ],
+    "methods": null,
+    "publication_date": "2024-09-10",
+    "pubmed_id": "39254902",
+    "results": "U87 and SHG44 cells with GSC-like phenotype (GSC-U87 and GSC-SHG44) displayed strong expression of CD133 and nestin versus the glioma cells. GSC-U87 and GSC-SHG44 possess the self-renewal capability. The level of PRMT1 was higher in glioblastoma tumor tissues than in the normal paracancer tissues. Knockdown of PRMT1 enhanced the radiotherapy sensitivity of GSCs-like cells, which wasu00a0evidenced by reduced survival fraction in GSC-U87 and GSC-SHG44 underwent sh-PRMT1 transfection. But, this effect was attenuated by Fer-1 (a ferroptosis inhibitor) treatment, accompanied by the abatement of ferroptosis.",
+    "title": "PRMT1 promotes radiotherapy resistance in glioma stem cells by inhibiting ferroptosis.",
+    "xml": "<Element 'PubmedArticle' at 0x00000239851F4630>"
+    }
+
+
+
+
+
+
+
+{ 
+"abstract ":  "A. ", 
+"authors ": [ { "affiliation ":  "Department of Neural and Behavioral Sciences, Penn State College of Medicine, United States. ",   "firstname ":  "Mariam ",   "initials ":  "M ",   "lastname ":  "Melkumyan "    },
+    {   "affiliation ":  "Department of Anesthesiology, Penn State College of Medicine, United States.  Department of Pharmacology, Penn State College of Medicine, United States. ",   "firstname ":  "Patrick A ",   "initials ":  "PA ",   "lastname ":  "Randall "    },
+    {   "affiliation ":  "Department of Neural and Behavioral Sciences, Penn State College of Medicine, United States. ",   "firstname ":  "Yuval ",   "initials ":  "Y ",   "lastname ":  "Silberman "    }], 
+    "conclusions ": null, 
+    "copyrights ": null, 
+    "doi ":  "10.101600213-019-05205-3 ", 
+    "journal ":  "Addiction neuroscience ", 
+    "keywords ": [     "Alcohol use disorder ",     "Central amygdala ",     "Neuroimmune markers ",     "Neuroinflammation "     ], 
+    "methods ": null, 
+    "publication_date ":  "2025-05-08 ", 
+    "pubmed_id ":  "40336623  7933  34896402  2650",
+    "results ": null, 
+    "title ":  "Central amygdala neuroimmune signaling in alcohol use disorder. ", 
+    "xml ":  "<Element 'PubmedArticle' at 0x000002BBC26F4A40> " }
+
+{ "abstract ":  "Alzheimer's disease (AD), a progressive dementia, is one of the most common neurodegenerative diseases. Clinical trial results of amyloid-  u03b2 (A  u03b2) and tau regulators based on the pretext of straightforward amyloid and tau immunotherapy were disappointing. There are currently no effective strategies for slowing the progression of AD. Herein, we spotlight the dysregulation of lipid metabolism, particularly the elevation of ceramides (Cers), as a critical yet underexplored facet of AD pathogenesis. Our study delineates the role of Cers in promoting microglial pyroptosis, a form of programmed cell death distinct from apoptosis and necroptosis, characterized by cellular swelling, and membrane rupture mediated by the NLRP3 inflammasome pathway. Utilizing both  ", 
+"authors ": [    {   "affiliation ":  "Department of Integrated Traditional Chinese & Western Medicine, The Second Xiangya Hospital of Central South University, Changsha, 410011, China.  National Clinical Research Center for Metabolic Diseases, Changsha, 410011, China. ",   "firstname ":  "Hongli ",   "initials ":  "H ",   "lastname ":  "Li "    },
+    {   "affiliation ":  "Department of Integrated Traditional Chinese & Western Medicine, The Second Xiangya Hospital of Central South University, Changsha, 410011, China.  National Clinical Research Center for Metabolic Diseases, Changsha, 410011, China. ",   "firstname ":  "Qiao ",   "initials ":  "Q ",   "lastname ":  "Xiao "    },
+    {   "affiliation ":  "Department of Integrated Traditional Chinese & Western Medicine, The Second Xiangya Hospital of Central South University, Changsha, 410011, China.  National Clinical Research Center for Metabolic Diseases, Changsha, 410011, China. ",   "firstname ":  "Lemei ",   "initials ":  "L ",   "lastname ":  "Zhu "    },
+    {   "affiliation ":  "Department of Rheumatology and Immunology, The Second Xiangya Hospital of Central South University, Changsha, 410011, China. ",   "firstname ":  "Jin ",   "initials ":  "J ",   "lastname ":  "Kang "    },    {   "affiliation ":  "Department of Neurology, The Second Xiangya Hospital of Central South University, Changsha, 410011, China.  Clinical Medical Research Center for Stroke Prevention and Treatment of Hunan Province, Department of Neurology, The Second Xiangya Hospital of Central South University, Changsha, 410011, China. ",   "firstname ":  "Qiong ",   "initials ":  "Q ",   "lastname ":  "Zhan "    },    {   "affiliation ":  "Department of Integrated Traditional Chinese & Western Medicine, The Second Xiangya Hospital of Central South University, Changsha, 410011, China.  National Clinical Research Center for Metabolic Diseases, Changsha, 410011, China. ",   "firstname ":  "Weijun ",   "initials ":  "W ",   "lastname ":  "Peng "    }     ], "conclusions ": null, "copyrights ":  "  u00a9 2024 The Author(s). ", "doi ":  "10.1016/j.jpha.2024.101106  10.1101/2023.10.30.563174 ", "journal ":  "Journal of pharmaceutical analysis ", "keywords ": [     "Alzheimer's disease ",     "COX2 ",     "Ceramides ",     "Icariin ",     "Microglia pyroptosis ",     "NLRP3 inflammasome "     ], "methods ": null, "publication_date ":  "2025-04-21 ", "pubmed_id ":  "40256246  38381674  37875627  35931864  35978311  38538614  37291336  36764275  36171629  38037161  36481964  38383790  31911096  35318099  32655770  28940479  35269861  36630483  36517743  35334248  37095548  31001073  31511005  36339577  38513154  11588328  10987308  39607691  34823758  32884056  37932279  36755014  34321623  37995685  32521573  37921870  38049923  14970312  30803453  32345374  31330872  38188085  37229892  35597118  36708428  33976141  35183378  27318139  36738946 ", "results ": null, "title ":  "Targeting ceramide-induced microglial pyroptosis: Icariin is a promising therapy for Alzheimer's disease. ", "xml ":  "<Element 'PubmedArticle' at 0x000002BBC2740720> " }"
+
+{ "abstract ":  "The regulation of glial cell activation is a critical step for the treatment or prevention of neuroinflammation-based brain diseases. However, the development of therapeutic drugs that pass the blood-brain barrier (BBB) and inhibit the glia cell activation remains a significant challenge. Herein, an ultrasmall 2D vanadium carbide quantum dots (V ", 
+"authors ": [    {   "affiliation ":  "Shenzhen Key Laboratory of Marine Biotechnology and Ecology, College of Life Sciences and Oceanography Shenzhen University Shenzhen Guangdong 518055 China.  School of Modern Industry for Selenium Science and Engineering Wuhan Polytechnic University Wuhan 430023 China. ",   "firstname ":  "Zhijun ",   "initials ":  "Z ",   "lastname ":  "He "    },    {   "affiliation ":  "Marshall Laboratory of Biomedical Engineering, Precision Medicine and Health Research Institute, Shenzhen Key Laboratory for Nano-Biosensing Technology, Guangdong Key Laboratory of Biomedical Measurements and Ultrasound Imaging, School of Biomedical Engineering, Shenzhen University Medical School Shenzhen University Shenzhen Guangdong 518060 China.  Beijing Key Laboratory for Bioengineering and Sensing Technology Department of Chemistry & Biological Engineering University of Science and Technology Beijing Beijing 100083 China. ",   "firstname ":  "Qiqi ",   "initials ":  "Q ",   "lastname ":  "Yang "    },    {   "affiliation ":  "Shenzhen Key Laboratory of Marine Biotechnology and Ecology, College of Life Sciences and Oceanography Shenzhen University Shenzhen Guangdong 518055 China. ",   "firstname ":  "Xiaoqian ",   "initials ":  "X ",   "lastname ":  "Li "    },    {   "affiliation ":  "Shenzhen Key Laboratory of Marine Biotechnology and Ecology, College of Life Sciences and Oceanography Shenzhen University Shenzhen Guangdong 518055 China. ",   "firstname ":  "Zi ",   "initials ":  "Z ",   "lastname ":  "Wang "    },    {   "affiliation ":  "Marshall Laboratory of Biomedical Engineering, Precision Medicine and Health Research Institute, Shenzhen Key Laboratory for Nano-Biosensing Technology, Guangdong Key Laboratory of Biomedical Measurements and Ultrasound Imaging, School of Biomedical Engineering, Shenzhen University Medical School Shenzhen University Shenzhen Guangdong 518060 China. ",   "firstname ":  "Shengwu ",   "initials ":  "S ",   "lastname ":  "Wen "    },    {   "affiliation ":  "Guangdong Laboratory of Artificial Intelligence and Digital Economy (SZ) Shenzhen Guangdong 518107 China. ",   "firstname ":  "Ming-Jie ",   "initials ":  "MJ ",   "lastname ":  "Dong "    },    {   "affiliation ":  "School of Modern Industry for Selenium Science and Engineering Wuhan Polytechnic University Wuhan 430023 China.  Marshall Laboratory of Biomedical Engineering, Precision Medicine and Health Research Institute, Shenzhen Key Laboratory for Nano-Biosensing Technology, Guangdong Key Laboratory of Biomedical Measurements and Ultrasound Imaging, School of Biomedical Engineering, Shenzhen University Medical School Shenzhen University Shenzhen Guangdong 518060 China. ",   "firstname ":  "Weiyun ",   "initials ":  "W ",   "lastname ":  "Zhang "    },    {   "affiliation ":  "Marshall Laboratory of Biomedical Engineering, Precision Medicine and Health Research Institute, Shenzhen Key Laboratory for Nano-Biosensing Technology, Guangdong Key Laboratory of Biomedical Measurements and Ultrasound Imaging, School of Biomedical Engineering, Shenzhen University Medical School Shenzhen University Shenzhen Guangdong 518060 China. ",   "firstname ":  "Youcong ",   "initials ":  "Y ",   "lastname ":  "Gong "    },    {   "affiliation ":  "Marshall Laboratory of Biomedical Engineering, Precision Medicine and Health Research Institute, Shenzhen Key Laboratory for Nano-Biosensing Technology, Guangdong Key Laboratory of Biomedical Measurements and Ultrasound Imaging, School of Biomedical Engineering, Shenzhen University Medical School Shenzhen University Shenzhen Guangdong 518060 China. ",   "firstname ":  "Zijia ",   "initials ":  "Z ",   "lastname ":  "Zhou "    },    {   "affiliation ":  "Shenzhen Key Laboratory of Marine Biotechnology and Ecology, College of Life Sciences and Oceanography Shenzhen University Shenzhen Guangdong 518055 China.  Shenzhen-Hong Kong Institute of Brain Science-Shenzhen Fundamental Research Institutions Shenzhen Guangdong 518055 China. ",   "firstname ":  "Qiong ",   "initials ":  "Q ",   "lastname ":  "Liu "    },    {   "affiliation ":  "Marshall Laboratory of Biomedical Engineering, Precision Medicine and Health Research Institute, Shenzhen Key Laboratory for Nano-Biosensing Technology, Guangdong Key Laboratory of Biomedical Measurements and Ultrasound Imaging, School of Biomedical Engineering, Shenzhen University Medical School Shenzhen University Shenzhen Guangdong 518060 China. ",   "firstname ":  "Haifeng ",   "initials ":  "H ",   "lastname ":  "Dong "    }     ], "conclusions ": null, "copyrights ":  "  u00a9 2024 The Author(s). Small Science published by Wiley  u2010VCH GmbH. ", "doi ":  "10.1002/smsc.202300334  10.15252/emmm.201810248 ", "journal ":  "Small science ", "keywords ": [     "anti  u2010neuroinflammations ",     "blood  u2013brain barrier permeabilities ",     "endoplasmic reticulum stress ",     "oxidative stress ",     "vanadium carbide quantum dots "     ], "methods ": null, "publication_date ":  "2025-04-11 ", "pubmed_id ":  "40212238  34433553  25792098  31296369  36517900  33402167  34436822  33315369  34233151  30737131  35965114  30066406  34026447  37208802  19946286  32037817  31639651  36813224  32457508  34453119  34267346  33850133  37933888  30677286  31034110  36651694  27750379  34254460  30619345  36293528  29302837  30906861  33181270  31534531  26470014  31213669  30247915  32828124  33053467  32357187  32846136  31870871  35151213  33725585  35861614  30703744  17180163  28886007  31015277  35483045  34124763  32466853  29179727 ", "results ": null, "title ":  "Vanadium Carbide Quantum Dots Exert Efficient Anti-Inflammatory Effects in Lipopolysaccharide-Induced BV2 Microglia and Mice. ", "xml ":  "<Element 'PubmedArticle' at 0x000002BBC2753D30> " }"
