@@ -30,3 +30,7 @@ SES_SMTP_PORT = int(os.getenv('SES_SMTP_PORT'))
 AWS_ACCESS_KEY_ID=os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY=os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_SQS_URL=os.getenv('AWS_SQS_URL')
+
+
+WATCHER_STATE_FILE=BASE_DIR / 'watcher/lib/state.json'
+WATCHER_SENT_RECORDER=BASE_DIR / 'watcher/lib/sent_admin.log'

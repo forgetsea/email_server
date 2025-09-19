@@ -22,7 +22,11 @@ remaining_emails = list(all_emails - sent_emails - json_emails)
 logger.info(f"all emails: {len(all_emails)}, pending send: {len(remaining_emails)}")
 logger.info(f"Will send Title: {EMAIL_SUBJECT}. Using template {EMAIL_TEMPLATE_PATH}")
 
-account = {"user": EMAIL_ADDRESS, "pass": EMAIL_PASSWORD}
+# gmail
+# account = {"user": EMAIL_ADDRESS, "pass": EMAIL_PASSWORD}
+# AWS SES
+account = {"user": SES_ACCOUNT, "pass": SES_PASSWORD}
+
 
 # send email
 def send_batches():
@@ -41,5 +45,13 @@ def send_batches():
 
 # system auto
 print("waiting to process")
-send_batches()
+# send_batches()
+smtp_send_SES(
+    remaining_emails=remaining_emails,
+    subject=EMAIL_SUBJECT,
+    template_path=EMAIL_TEMPLATE_PATH,
+    account=account,
+    sent_emails=sent_emails,
+    SENT_RECORD_FILE=SENT_RECORD_FILE
+)
 print("All finished")

@@ -37,3 +37,7 @@ Scripts\activate
 python medpro.py
 ```
 
+
+--------------
+Important Keywords
+PLX-5622: CSF-1R, microglia
