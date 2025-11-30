@@ -4,12 +4,14 @@ from official websites https://www.python.org/downloads/
 2. find a directory
 eg: C:\Documents\project
 
-3. open terminal
+3. create '/outputs', 'temp', '/temp/sum' directory (Scripts may create for you) 
+
+4. open terminal
 	a. press `win` + `R` 
 	b. type `cmd`
 	you will find new terminal open
 
-4. in terminal create python virtual env 
+5. in terminal create python virtual env 
 	a. go to directory 
 	b. create python virtual environment
 	c. go to environment dirctory
@@ -20,7 +22,7 @@ eg: C:\Documents\project
 	cd pubpro
 	```
 
-5. start python virtual env
+6. start python virtual env
 	```
 	Scripts\activate
 	pip install -r requirements.txt
@@ -37,6 +39,10 @@ Scripts\activate
 python medpro.py
 ```
 
+In `/outputs`, results would be split into 'CN_' and non-CN files. 
+
+Move Excel files under `/temp` to deduplicate
+run ``` python dedup_excel.py```  to dedup these Excel files. Result will be in `/temp/sum/`
 
 --------------
 Important Keywords
