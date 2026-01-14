@@ -49,7 +49,7 @@ def output_excel(emails, output_path):
 # combine files under folder and dedup
 logger.info("Start sum emails")
 path = 'temp/'
-output_path = 'temp/sum/emails_CN.xlsx'
+output_path = 'temp/sum/emails.xlsx'
 emails = read_excel(path)
 output_excel(emails, output_path)
 logger.info("Finished-----")

@@ -1,0 +1,490 @@
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'
+Traceback (most recent call last):
+  File "/Users/max/Documents/work/email_server/ses_report.py", line 4, in <module>
+    from src.config import *
+  File "/Users/max/Documents/work/email_server/src/__init__.py", line 2, in <module>
+    from .email_utils import send_email_batch_gmail, build_email_content,smtp_send_SES
+  File "/Users/max/Documents/work/email_server/src/email_utils.py", line 7, in <module>
+    from .logger_utils import logger
+  File "/Users/max/Documents/work/email_server/src/logger_utils.py", line 6, in <module>
+    LOGS_DIR.mkdir(exist_ok=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: 'logs'

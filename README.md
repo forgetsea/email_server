@@ -1,4 +1,25 @@
-"# My Project" 
+# Tools for sending email and collecting emails from pubmed
+
+/pubpro directory for collecting emails.
+
+---------------------------------------------
+How to send a new topic:
+
+1. update email info in `src/email_config.py`: 
+	Template path, record_file subject, log_file
+	
+2. Create a new template html file in templates/
+
+3. reset files/ , put new excel file in files/
+
+4. run test file: python send-test.py
+
+5. python main.py
+
+
+--------------------------------
+
+"# My Project" to init
 1. Install python
 from official websites https://www.python.org/downloads/
 
@@ -30,7 +51,7 @@ eg: C:\Documents\project
 --------------------------------------------
 run scripts
 
-start python virtual env in dictory, execute files
+start python virtual env in directory, execute files
 
 ```
 cd C:\Documents\project\email
@@ -42,13 +63,4 @@ python
 Image upload
 
 upload to forgetsea/assets
-image link(cloudflare cdn): https://assets-42h.pages.dev/
-
-
----------------------------------------------
-How to send a new topic
-1.update email info in src/email_config.py
-	Template path, record_file subject, log_file
-2.Create a new template html file in templates/
-3.reset files/ , put new excel file in files/
-4. run test file
+image link(cloudflare cdn): https://assets-42h.pages.dev/assets/

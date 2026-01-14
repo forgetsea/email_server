@@ -27,6 +27,7 @@ def build_email_content(batch_emails, subject, template_path, address):
     return msg
 
 def send_email_batch_gmail(batch_emails, subject, template_path, account):
+    # for google use
     try:
         msg = build_email_content(batch_emails, subject, template_path, EMAIL_ADDRESS)
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
@@ -64,6 +65,7 @@ def send_one_email_SES(email, subject, template_path, account):
     return False
 
 def smtp_send_SES(remaining_emails, subject, template_path, account, sent_emails, SENT_RECORD_FILE):
+    #Amazon SES 
     html_template = load_template_body(template_path)
     MAX_PER_SESSION=300
     index = 0
@@ -110,6 +112,7 @@ def build_personal_email(recipient, subject, html_body, sender):
     msg['From'] = sender
     msg['To'] = recipient
 
+    msg['Reply-To'] = 'info@chemgood.com'
     # Unsubscribe header (RFC compliant)
     msg['List-Unsubscribe'] = '<mailto:tech@chemgood.com?subject=unsubscribe>'
     msg['List-Unsubscribe-Post'] = 'List-Unsubscribe=One-Click'
@@ -118,7 +121,8 @@ def build_personal_email(recipient, subject, html_body, sender):
     # Optionally add plain text fallback
     plain_text = subject
 
-    msg.attach(MIMEText(plain_text, 'plain'))
-    msg.attach(MIMEText(html_body, 'html'))
+    msg.attach(MIMEText(plain_text, 'plain', 'utf-8'))
+    msg.attach(MIMEText(html_body, 'html', 'utf-8'))
+
 
     return msg
