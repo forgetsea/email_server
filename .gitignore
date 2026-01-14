@@ -10,3 +10,5 @@ templates/
 test.py
 venv/
 .DS_Store
+Include/
+scrape/

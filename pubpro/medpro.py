@@ -199,7 +199,8 @@ def medpro_search(keywordA, keywordB='', input_date=''):
 
 # Example usage
 keywordA = input("Please enter the first keyword: ")
-keywordB = input("Please enter the second keyword(optional): ")
+# keywordB = input("Please enter the second keyword(optional): ")
+keywordB = ''
 input_date = input("Enter Search end date(YYYY/MM),or leave blank for today: ").strip()
 
 # query = build_query(keywordA, keywordB, input_date)
